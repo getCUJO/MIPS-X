@@ -56,12 +56,17 @@ fi
 append=${bootargs[$x]}
 
 qemucmd="/armx/run/${qemus[$x]} -M ${machines[$x]} ${cpu} -m ${mems[$x]} -kernel /armx/${ids[$x]}/kernel/${kernels[$x]} ${dtb} -drive file=${hostfs},${drives[$x]} -append \"$append\" -net ${nics[$x]} -net tap,ifname=tap0,script=no,downscript=no -nographic"
+<<<<<<< HEAD
 hostfs="/armx/EMINENT/debian_squeeze_mipsel_standard.qcow2"
 qemucmd="/armx/run/${qemus[$x]} -M ${machines[$x]} ${cpu} -m ${mems[$x]} -kernel /armx/${ids[$x]}/kernel/${kernels[$x]} ${dtb} -hda ${hostfs} -append \"$append\" -net ${nics[$x]} -net tap,ifname=tap0,script=no,downscript=no -no-reboot -nographic"
 
 log "[+] QEMU Launch Command"
 log "${qemucmd}"
 echo "${qemucmd}"
+=======
+log "[+] QEMU Launch Command"
+log "${qemucmd}"
+>>>>>>> 16c4c0667515ae08b6d94e44ac1afc952728573b
 
 cp /armx/run/run-init-template /armx/${ids[$x]}/run-init
 cp /armx/run/run-binsh-template /armx/${ids[$x]}/run-binsh
