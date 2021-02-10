@@ -1,4 +1,4 @@
-# ARM-X Firmware Emulation Framework
+# MIPS-X Firmware Emulation Framework, on top of ARM-X
 
 by Saumil Shah [@therealsaumil][saumil]
 
