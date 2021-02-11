@@ -8,3 +8,4 @@ For MIPS-X
 2. untar rootfs as root! into EMINENT/rootfs
 3. I had issues with the provided static qemu-system-mipsel-5.1.0 , but the qemu-system-mipsel installed on the system worked like a charm for me
 4. run/launcher should work now
+5. login as root/root
