@@ -17,8 +17,9 @@ cd ..
 
 #Create bridge interface
 sudo sh -c 'echo "auto br0\niface br0 inet dhcp\npre-up brctl addbr br0\npost-down brctl delbr br0" > /etc/network/interfaces.d/br0'
+cd ~/mipsx-main/install_files
 sudo etc/local.d/10-tun-network.start
-sudo networking restart
+sudo service networking restart
 
 #TODO check /etc/local.d exists and executes on Kali
 sudo sh -c 'cat etc/local.d/10-tun-network.start >> /etc/rc.local'
@@ -28,7 +29,7 @@ cp home/kali/.ssh/id_rsa.armx* /home/kali/.ssh/
 wget -O ~/.gdbinit-gef.py -q http://gef.blah.cat/py
 echo source ~/.gdbinit-gef.py >> ~/.gdbinit
 
-cd ..
+cd ../..
 sudo mv armx/ /
 sudo chown -R kali /armx
 export PATH=$PATH:/armx/run	# It is best to add your shell profile this path
