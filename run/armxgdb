@@ -6,6 +6,7 @@
 # Requires a parameter - pid or process name
 
 gdb="arm-linux-gnueabi-gdb"
+gdb="gdb-multiarch"
 
 if [ "$1" = "" ]
 then
@@ -28,5 +29,5 @@ ROOTFSPATH="/armx/$ARMXDEVICE/$ROOTFS"
 
 $gdb -q \
    -ex="target remote | ssh -T root@192.168.100.2 gdbserver - $attach" \
-   -ex="set sysroot target:$ROOTFSPATH"
-
+   -ex="set sysroot target:$ROOTFSPATH" \
+   -ex="set architecture mips"
