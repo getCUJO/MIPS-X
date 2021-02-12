@@ -4,7 +4,7 @@
 Let's start with the following commands
 ``` 
 # Install some stuff
-sudo apt install -y qemu dialog bridge-utils uml-utilities nfs-kernel-server gdb-multiarch
+sudo apt install -y qemu qemu-system dialog bridge-utils uml-utilities nfs-kernel-server gdb-multiarch
 # Set up NFS
 sudo sh -c 'echo "\n\n/armx   192.168.100.0/24(rw,sync,no_root_squash,no_subtree_check)\n" >> /etc/exports'
 sudo systemctl enable nfs-kernel-server
