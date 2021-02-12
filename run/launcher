@@ -55,7 +55,8 @@ fi
 
 append=${bootargs[$x]}
 
-if ["${cpus[$x]}" == "4Kc"] 
+#Different commands are used for mips CPUs like 4Kc and ARM CPUs
+if [[ "${cpus[$x]}" == 4Kc ]] 
 then
     hostfs="/armx/EMINENT/debian_squeeze_mipsel_standard.qcow2"
     qemucmd="/armx/run/${qemus[$x]} -M ${machines[$x]} ${cpu} -m ${mems[$x]} -kernel /armx/${ids[$x]}/kernel/${kernels[$x]} ${dtb} -hda ${hostfs} -append \"$append\" -net ${nics[$x]} -net tap,ifname=tap0,script=no,downscript=no -no-reboot -nographic"
