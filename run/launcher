@@ -72,6 +72,7 @@ cp /armx/run/run-init-template /armx/${ids[$x]}/run-init
 cp /armx/run/run-binsh-template /armx/${ids[$x]}/run-binsh
 
 echo ${ids[$x]} > /tmp/armxrunning
+echo ${x} > /tmp/armxrunningid
 
 if [ "$CONSOLELOGFILE" ]
 then

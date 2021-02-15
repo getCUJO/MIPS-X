@@ -5,8 +5,6 @@
 #
 # Requires a parameter - pid or process name
 
-gdb="arm-linux-gnueabi-gdb"
-gdb="gdb-multiarch"
 
 if [ "$1" = "" ]
 then
@@ -24,10 +22,22 @@ fi
 
 source /armx/run/checkarmx
 ARMXDEVICE=$(</tmp/armxrunning)
+ARMXDEVICEID=$(</tmp/armxrunningid)
 source /armx/run/parseini /armx/$ARMXDEVICE/config
 ROOTFSPATH="/armx/$ARMXDEVICE/$ROOTFS"
+
+source /armx/run/utils
+check_if_logging_required
+new_log
+
+source /armx/run/parsedevices
+
+gdb=${gdb[$ARMXDEVICEID]}
+extraopts=${gdb_extra[$ARMXDEVICEID]}
+
+echo "${gdb}|${extraopts}"
 
 $gdb -q \
    -ex="target remote | ssh -T root@192.168.100.2 gdbserver - $attach" \
    -ex="set sysroot target:$ROOTFSPATH" \
-   -ex="set architecture mips"
+   $extraopts
