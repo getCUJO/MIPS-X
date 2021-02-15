@@ -1,0 +1,4 @@
+#arch_endian,arch,endian,gdb,gdb_extra,hostfs
+mipsel,mips,el,gdb-multiarch,-ex="set architecture mips",/armx/hostfs/debian_squeeze_mipsel_standard.qcow2
+mipseb,mips,eb,gdb-multiarch,-ex="set architecture mips",/armx/hostfs/debian_squeeze_mipseb_standard.qcow2
+armel,arm,el,arm-linux-gnueabi-gdb,,/armx/hostfs/hostfs.ext2
