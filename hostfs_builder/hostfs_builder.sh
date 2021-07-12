@@ -148,3 +148,5 @@ chmod 755 /etc/init.d/S60armx
 #Step 12
 sed -i "s/#Port 22/Port 22222/" /etc/ssh/sshd_config
 service ssh restart
+
+echo 'DROPBEAR_ARGS="-p 22222"' > /etc/default/dropbear
