@@ -59,6 +59,11 @@ apt-get --allow-unauthenticated update
 apt-get --allow-unauthenticated install dialog mc
 ```
 
-
+# Step 11 - make it compliant with latest ARM-X
+Change the SSHD port from 22 to 22222 in /etc/sshd_config
+The restart with 
+```
+service ssh restart
+```
 
 
