@@ -1,4 +1,6 @@
-## This is a guide on how you can create your own hostfs for qemu use
+This guide is implemented in hostfs_builder.sh 
+
+## This is a manual guide on how you can create your own hostfs for qemu use
 
 # Step 1 - Download or build base hostfs
 Create a hostfs with a tool like buildroot or download a qcow2 from https://people.debian.org/~aurel32/qemu/
