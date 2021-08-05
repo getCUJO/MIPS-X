@@ -17,7 +17,7 @@ tar -zxvf debian_squeeze_mipsel_standard.qcow2.tar.gz
 
 If you want to use your own hostfs - e.g. built by buildroot, check https://github.com/getCUJO/MIPS-X/tree/main/hostfs_builder 
 
-3. run/launcher should work now
+3. use /armx/run/launcher 
 4. username is root, password is empty
 
 Authors: Patrick Ross @VillageIDIOTLab, Zoltan Balazs @zh4ck
