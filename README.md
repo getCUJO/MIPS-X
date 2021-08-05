@@ -19,3 +19,5 @@ If you want to use your own hostfs - e.g. built by buildroot, check https://gith
 
 3. run/launcher should work now
 4. username is root, password is empty
+
+Authors: Patrick Ross @VillageIDIOTLab, Zoltan Balazs @zh4ck
