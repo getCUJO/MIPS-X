@@ -1,0 +1,12 @@
+  git clone --depth 1 git://git.buildroot.net/buildroot
+  cd buildroot
+  # list all default-configs
+  l
+  # go back to the previous folder
+  cd -
+  mkdir buildroot_mips32be
+  cd buildroot_mips32be/
+  make O=$PWD -C ../buildroot qemu_mips32r6_malta_defconfig
+  make menuconfig #---> enable SSHD (target packages, networking apps, openssh, server), bash, dialog, gdbserver (enable gcc 10, C++ in toolchain)
+  make linux-menuconfig  #----> enable NFS client support
+  make BR2_JLEVEL=5
