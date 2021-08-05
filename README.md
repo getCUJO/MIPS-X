@@ -1,6 +1,6 @@
 # MIPS-X Firmware Emulation Framework, on top of ARM-X
 
-Note: This repo is already deprecated, as ARM-X moved to Docker architecture. Check the MIPS-X branch on https://github.com/therealsaumil/armx for the real deal. 
+Note: As ARM-X moved to Docker architecture, please also check the MIPS-X branch on https://github.com/therealsaumil/armx for the real deal. 
 
 Steps to start:
 1. ARM-X install instructions on Kali are here: docs/install-armx-kali.md
