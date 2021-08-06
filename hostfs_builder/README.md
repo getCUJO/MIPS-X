@@ -3,7 +3,8 @@ This guide is implemented in hostfs_builder.sh
 ## This is a manual guide on how you can create your own hostfs for qemu use
 
 # Step 1 - Download or build base hostfs
-Create a hostfs with a tool like buildroot or download a qcow2 from https://people.debian.org/~aurel32/qemu/
+Create a hostfs with a tool like buildroot https://github.com/getCUJO/MIPS-X/blob/main/hostfs_builder/buildroot_notes.txt
+or download a qcow2 from https://people.debian.org/~aurel32/qemu/
 
 # Step 2 - Network config
 Boot into the hostfs with qemu and copy from hostfs_builder directory etc/network/interfaces to hostfs in qemu /etc/network/interfaces
