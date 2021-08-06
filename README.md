@@ -3,7 +3,7 @@
 Note: As ARM-X moved to Docker architecture, please also check the MIPS-X branch on https://github.com/therealsaumil/armx/tree/mipsx for the real deal. 
 
 This repo is based on the old (pre June 2021) ARM-X.
-This repo uses old Debian based large hostfs and old kernels. 
+This repo uses old Debian based large hostfs and intentionally old kernels. 
 A smaller, buildroot based hostfs can be found in the MIPS-X branch. 
 
 ## MIPS-X quick start guide: 
